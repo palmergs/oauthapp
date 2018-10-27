@@ -3,6 +3,7 @@ Rails.application.routes.draw do
       class_name: 'FormUser', 
       controllers: { 
         omniauth_callbacks: 'omniauth_callbacks', 
+        sessions: 'users/sessions',
         registrations: 'registrations' }
   get 'welcome/index'
   root 'welcome#index'

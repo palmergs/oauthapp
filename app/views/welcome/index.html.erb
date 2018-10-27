@@ -1,5 +1,14 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
 <% if current_user %>
+<p>Welcome, <%= current_user.inspect %></p>
+<% current_user.identities.each do |ident| %>
+  <p>
+  <% if ident.image %>
+    <img style="width: 80px; height: 80px; display: block; float: left; margin-right: 1rem;" src="<%= ident.image %>" alt="<%= ident.provider %> Avatar"/>
+  <% end %>
+  <%= ident.inspect %>
+  </p>
+<% end %>
 <%= link_to "Signout", destroy_user_session_path, method: :delete %>
 <% end %>
