@@ -29,8 +29,8 @@ gem 'omniauth-github'
 gem 'omniauth-twitter'
 gem 'omniauth-facebook'
 gem 'omniauth-instagram'
-#gem 'twitter'
-#gem 'instagram'
+gem 'twitter'
+gem 'instagram'
 gem 'omniauth-google-oauth2'
 
 # Use Capistrano for deployment
